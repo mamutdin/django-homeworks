@@ -29,5 +29,5 @@ class AdvertisementViewSet(ModelViewSet):
     def get_permissions(self):
         """Получение прав для действий."""
         if self.request.method in SAFE_METHODS:
-            return [IsAuthenticated(), IsOwner()]
-        return []
+            return []
+        return [IsAuthenticated(), IsOwner()]
